@@ -11,7 +11,7 @@ function App() {
     const [count, setCount] = useState(0)
 
     return (
-    <TonConnectUIProvider manifestUrl="https://<YOUR_APP_URL>/tonconnect-manifest.json">
+    <TonConnectUIProvider manifestUrl="https://test-long.metaforo.io/tonconnect-manifest.json">
         <div>
             <a href="https://vitejs.dev" target="_blank">
                 <img src={viteLogo} className="logo" alt="Vite logo" />
