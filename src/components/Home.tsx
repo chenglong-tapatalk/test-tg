@@ -5,7 +5,6 @@ import { TonConnectUIProvider,TonConnectButton } from '@tonconnect/ui-react';
 import Card from "./Card"
 
 function Home() {
-    const [count, setCount] = useState(0)
 
     return (
     <div className="main">

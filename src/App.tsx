@@ -9,7 +9,6 @@ import { TonConnectUIProvider,TonConnectButton } from '@tonconnect/ui-react';
 
 
 function App() {
-    const [count, setCount] = useState(0)
 
     return (
     <TonConnectUIProvider manifestUrl="https://test-long.metaforo.io/tonconnect-manifest.json">
