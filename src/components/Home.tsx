@@ -1,7 +1,3 @@
-import { useState } from 'react'
-
-import WebApp from '@twa-dev/sdk'
-import { TonConnectUIProvider,TonConnectButton } from '@tonconnect/ui-react';
 import Card from "./Card"
 
 function Home() {
