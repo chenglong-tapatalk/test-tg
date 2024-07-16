@@ -73,7 +73,6 @@ body {
 .main {
   padding: 16px;
   background: #F2F2FD;
-  width: 100%;
 }
 .filter {
   display: flex;
