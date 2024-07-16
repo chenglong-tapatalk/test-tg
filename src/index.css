@@ -32,10 +32,6 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 /*h1 {*/
@@ -77,8 +73,7 @@ body {
 .main {
   padding: 16px;
   background: #F2F2FD;
-  min-height: 100vh;
-  min-width: 100vw;
+  width: 100%;
 }
 .filter {
   display: flex;
