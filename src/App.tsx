@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Home from './components/Home.tsx';
 
 import WebApp from '@twa-dev/sdk'
 import { TonConnectUIProvider,TonConnectButton } from '@tonconnect/ui-react';
@@ -12,28 +13,7 @@ function App() {
 
     return (
     <TonConnectUIProvider manifestUrl="https://test-long.metaforo.io/tonconnect-manifest.json">
-        <div>
-            <a href="https://vitejs.dev" target="_blank">
-                <img src={viteLogo} className="logo" alt="Vite logo" />
-            </a>
-            <a href="https://react.dev" target="_blank">
-                <img src={reactLogo} className="logo react" alt="React logo" />
-            </a>
-        </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-            <button onClick={() => setCount((count) => count + 1)}>
-                计数是 {count}
-            </button>
-        </div>
-        {/* 在此处添加带有警告回调的按钮 */}
-        <div className="card">
-            <button onClick={() => WebApp.showAlert(`Hello World! Current count is ${count}`)}>
-                显示警告
-            </button>
-        </div>
-        <span>My App with React UI</span>
-        <TonConnectButton />
+        <Home />
     </TonConnectUIProvider>
     )
 }
