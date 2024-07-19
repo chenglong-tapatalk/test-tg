@@ -17,7 +17,7 @@ function Home() {
             </div>
         </div>
         <div className="card">
-            <button onClick={() => WebApp.showAlert(JSON.stringify(WebApp.initDataUnsafe))}>
+            <button onClick={() => WebApp.showAlert(WebApp.initData)}>
                 显示警告0
             </button>
             <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user ? JSON.stringify(WebApp.initDataUnsafe.user) :'mei')}>
