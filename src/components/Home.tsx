@@ -17,7 +17,7 @@ function Home() {
             </div>
         </div>
         <div className="card">
-            <button onClick={() => WebApp.showAlert(WebApp.initData)}>
+            <button onClick={() => WebApp.showAlert('123')}>
                 显示警告
             </button>
         </div>
