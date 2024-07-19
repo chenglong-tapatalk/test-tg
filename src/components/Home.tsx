@@ -29,10 +29,10 @@ function Home() {
             <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.hash)}>
                 显示警告hash
             </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.auth_date)}>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.auth_date+'')}>
                 显示警告auth_date
             </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user && WebApp.initDataUnsafe.user.id ? WebApp.initDataUnsafe.user.id : 'mei')}>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user && WebApp.initDataUnsafe.user.id ? WebApp.initDataUnsafe.user.id+'' : 'mei')}>
                 显示警告userid
             </button>
             <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user && WebApp.initDataUnsafe.user.username ? WebApp.initDataUnsafe.user.username : 'mei')}>
