@@ -17,8 +17,17 @@ function Home() {
             </div>
         </div>
         <div className="card">
-            <button onClick={() => WebApp.showAlert('123')}>
-                显示警告
+            <button onClick={() => WebApp.showAlert(WebApp.backgroundColor)}>
+                显示警告0
+            </button>
+            <button onClick={() => WebApp.showAlert(WebApp.initData)}>
+                显示警告1
+            </button>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe)}>
+                显示警告2
+            </button>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.hash)}>
+                显示警告3
             </button>
         </div>
         <div className="card-main">
