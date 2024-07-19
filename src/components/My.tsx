@@ -1,4 +1,3 @@
-import DetailCard from "./DetailCard.tsx"
 
 function My() {
 
