@@ -23,7 +23,7 @@ function Home() {
             <button onClick={() => WebApp.showAlert(WebApp.initData)}>
                 显示警告1
             </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.query_id)}>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.query_id ? WebApp.initDataUnsafe.query_id : 'mei')}>
                 显示警告query_id
             </button>
             <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.hash)}>
@@ -32,10 +32,10 @@ function Home() {
             <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.auth_date)}>
                 显示警告auth_date
             </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user.id)}>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user && WebApp.initDataUnsafe.user.id ? WebApp.initDataUnsafe.user.id : 'mei')}>
                 显示警告userid
             </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user.username)}>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user && WebApp.initDataUnsafe.user.username ? WebApp.initDataUnsafe.user.username : 'mei')}>
                 显示警告username
             </button>
         </div>
