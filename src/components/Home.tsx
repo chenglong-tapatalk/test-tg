@@ -38,6 +38,13 @@ function Home() {
             <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user && WebApp.initDataUnsafe.user.username ? WebApp.initDataUnsafe.user.username : 'mei')}>
                 显示警告username
             </button>
+            <div>
+                {WebApp.initData}
+            </div>
+            <br/>
+            <div>
+                {JSON.stringify(WebApp.initDataUnsafe)}
+            </div>
         </div>
         <div className="card-main">
             <Card />
