@@ -17,10 +17,10 @@ function Home() {
             </div>
         </div>
         <div className="card">
-            <button onClick={() => WebApp.showAlert(JSON.parse(WebApp.initDataUnsafe))}>
+            <button onClick={() => WebApp.showAlert(JSON.stringify(WebApp.initDataUnsafe))}>
                 显示警告0
             </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user ? JSON.parse(WebApp.initDataUnsafe.user) :'mei')}>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user ? JSON.stringify(WebApp.initDataUnsafe.user) :'mei')}>
                 显示警告1
             </button>
             <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.query_id ? WebApp.initDataUnsafe.query_id : 'mei')}>
