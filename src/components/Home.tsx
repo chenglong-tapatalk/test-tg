@@ -23,11 +23,20 @@ function Home() {
             <button onClick={() => WebApp.showAlert(WebApp.initData)}>
                 显示警告1
             </button>
-            {/*<button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe)}>*/}
-            {/*    显示警告2*/}
-            {/*</button>*/}
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.query_id)}>
+                显示警告query_id
+            </button>
             <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.hash)}>
-                显示警告3
+                显示警告hash
+            </button>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.auth_date)}>
+                显示警告auth_date
+            </button>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user.id)}>
+                显示警告userid
+            </button>
+            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user.username)}>
+                显示警告username
             </button>
         </div>
         <div className="card-main">
