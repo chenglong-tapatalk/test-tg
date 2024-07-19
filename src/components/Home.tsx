@@ -1,4 +1,5 @@
 import Card from "./Card"
+import WebApp from '@twa-dev/sdk'
 
 function Home() {
 
@@ -14,6 +15,11 @@ function Home() {
                     Filter
                 </div>
             </div>
+        </div>
+        <div className="card">
+            <button onClick={() => WebApp.showAlert(WebApp.initData)}>
+                显示警告
+            </button>
         </div>
         <div className="card-main">
             <Card />
