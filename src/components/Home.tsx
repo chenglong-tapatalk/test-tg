@@ -2,6 +2,7 @@ import Card from "./Card"
 import WebApp from '@twa-dev/sdk'
 
 function Home() {
+    
 
     return (
     <div className="main">
@@ -17,34 +18,11 @@ function Home() {
             </div>
         </div>
         <div className="card">
-            <button onClick={() => WebApp.showAlert(WebApp.initData)}>
-                显示警告0
-            </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user ? JSON.stringify(WebApp.initDataUnsafe.user) :'mei')}>
-                显示警告1
-            </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.query_id ? WebApp.initDataUnsafe.query_id : 'mei')}>
-                显示警告query_id
-            </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.hash)}>
-                显示警告hash
-            </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.auth_date+'')}>
-                显示警告auth_date
-            </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user && WebApp.initDataUnsafe.user.id ? WebApp.initDataUnsafe.user.id+'' : 'mei')}>
-                显示警告userid
-            </button>
-            <button onClick={() => WebApp.showAlert(WebApp.initDataUnsafe.user && WebApp.initDataUnsafe.user.username ? WebApp.initDataUnsafe.user.username : 'mei')}>
-                显示警告username
-            </button>
             <div>
                 {WebApp.initData}
             </div>
             <br/>
-            <div>
-                {JSON.stringify(WebApp.initDataUnsafe)}
-            </div>
+
         </div>
         <div className="card-main">
             <Card />
