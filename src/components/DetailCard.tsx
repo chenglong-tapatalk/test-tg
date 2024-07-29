@@ -2,7 +2,7 @@ import {useSelector} from "react-redux";
 import {diffTime} from "../helper/helper";
 
 function DetailCard() {
-    const data = useSelector(store => store.questDetail);
+    const data = useSelector((store:any) => store.questDetail);
     return (
     <div className="card">
         <div className="card-top card-top-detail">

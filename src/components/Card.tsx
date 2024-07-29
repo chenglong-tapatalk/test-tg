@@ -1,6 +1,6 @@
 import {diffTime} from "../helper/helper";
-function Card(props) {
-    const {data,index} = props;
+function Card(props:any) {
+    const {data} = props;
     return (
     <div className="card" onClick={()=>{window.location.href='/?tab=detail&id='+data.id}}>
         <div className="card-top">

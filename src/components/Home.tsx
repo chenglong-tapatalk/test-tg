@@ -9,7 +9,7 @@ function Home() {
     useEffect(() => {
         store.dispatch(getQuestList());
     }, []);
-    const quest = useSelector(store => store.quest);
+    const quest = useSelector((store:any) => store.quest);
     console.log(11111,quest);
     return (
     <div className="main">
@@ -32,7 +32,7 @@ function Home() {
 
         {/*</div>*/}
         <div className="card-main">
-            {quest.map((c,i) =>
+            {quest.map((c:any,i:any) =>
                 <Card data={c} index={i} />
             )}
         </div>

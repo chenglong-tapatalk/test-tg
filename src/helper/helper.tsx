@@ -26,7 +26,7 @@ export function diffTime(time: Date | string) {
     return d + 'd:' + i + 'h:' + s + 'm';
 }
 
-export function getQueryVariable(variable) {
+export function getQueryVariable(variable:string) {
     const query = window.location.search.substring(1);
     console.log(query);
     const vars = query.split("&");

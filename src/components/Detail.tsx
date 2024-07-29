@@ -15,7 +15,7 @@ function Detail() {
     useEffect(() => {
         store.dispatch(getQuestDetail(id));
     }, []);
-    const data = useSelector(store => store.questDetail);
+    const data = useSelector((store:any) => store.questDetail);
     return (
     <div className="detail-main">
         <div className="detail-top">
