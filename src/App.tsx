@@ -11,25 +11,12 @@ import {
     QueryClientProvider,
     QueryClient,
 } from "@tanstack/react-query";
+import {getQueryVariable} from "./helper/helper";
 
 const queryClient = new QueryClient();
 
 function App() {
-    const getQueryVariable = (variable) =>
-    {
-        const query = window.location.search.substring(1);
-        console.log(query);
-        const vars = query.split("&");
-        for (let i=0;i<vars.length;i++) {
-            let pair = vars[i].split("=");
-            if(pair[0] == variable){return pair[1];}
-        }
-        return false;
-    }
-    console.log(getQueryVariable('tab'));
-
     return (
-
     <QueryClientProvider client={queryClient}>
         <PersistGate loading={null} persistor={persistor} >
             <Provider store={store}>

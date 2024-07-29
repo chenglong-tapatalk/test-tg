@@ -1,5 +1,5 @@
 import Card from "./Card";
-import WebApp from '@twa-dev/sdk';
+// import WebApp from '@twa-dev/sdk';
 import store from "../store";
 import { getQuestList } from "../store/reducer";
 import { useSelector } from "react-redux";

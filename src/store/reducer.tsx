@@ -45,6 +45,7 @@ const mainSlice = createSlice({
                 });
         },
         getQuestDetail(state,action) {
+            state.quest = state.quest;
             var myHeaders = new Headers();
             myHeaders.append("Content-Type", "application/json");
             var requestOptions = {

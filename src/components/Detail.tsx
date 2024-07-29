@@ -3,19 +3,10 @@ import {useEffect} from "react";
 import {getQuestDetail} from "../store/reducer";
 import store from "../store";
 import {useSelector} from "react-redux";
+import {getQueryVariable} from "../helper/helper";
 
 function Detail() {
-    const getQueryVariable = (variable) =>
-    {
-        const query = window.location.search.substring(1);
-        console.log(query);
-        const vars = query.split("&");
-        for (let i=0;i<vars.length;i++) {
-            let pair = vars[i].split("=");
-            if(pair[0] == variable){return pair[1];}
-        }
-        return false;
-    }
+
     const id = getQueryVariable('id');
     console.log(id);
     if (!id) {
