@@ -30,7 +30,7 @@ const mainSlice = createSlice({
                 headers: {'Content-Type': 'application/json','Authorization':'boot.app.d23a91932e8670fdf19510b01c91796b.017a523ef3dc4236a0faf79757488821' }
             };
 
-            fetch("http://34.225.3.60:8888/api/app/quest/getAppQuestPage", requestOptions)
+            fetch("https://bot-api.yesbloom.xyz/api/app/quest/getAppQuestPage", requestOptions)
                 .then(response => response.text())
                 .then(res => {
                     const r = JSON.parse(res);
@@ -53,7 +53,7 @@ const mainSlice = createSlice({
                 headers: {'Content-Type': 'application/json','Authorization':'boot.app.d23a91932e8670fdf19510b01c91796b.017a523ef3dc4236a0faf79757488821' }
             };
 
-            fetch("http://34.225.3.60:8888/api/app/quest/getAppQuest/"+action.payload, requestOptions)
+            fetch("https://bot-api.yesbloom.xyz/api/app/quest/getAppQuest/"+action.payload, requestOptions)
                 .then(response => response.text())
                 .then(res => {
                     const r = JSON.parse(res);
