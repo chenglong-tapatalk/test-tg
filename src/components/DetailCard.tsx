@@ -1,5 +1,34 @@
-function DetailCard() {
+import {useSelector} from "react-redux";
+import dayjs from "dayjs";
 
+function DetailCard() {
+    const data = useSelector(store => store.questDetail);
+    const diffTime = (time: Date | string) => {
+        console.log(dayjs(time).diff(dayjs(),'second'));
+        const times = dayjs(time).diff(dayjs(),'second');
+        let d = '0';
+        let i = '00';
+        let s = '00';
+        if (times > 86400) {
+            d = Math.floor(times / 86400) + '';
+        }
+        const hour = times % 86400;
+        if (hour > 3600) {
+            i = Math.floor(hour / 3600) + '';
+            if (parseInt(i) < 10) {
+                i = '0' + i;
+            }
+        }
+        const minute = hour % 3600;
+        if (minute > 0) {
+            s = Math.floor(minute / 60) + '';
+            if (parseInt(s) < 10) {
+                s = '0' + s;
+            }
+        }
+
+        return d + 'd:' + i + 'h:' + s + 'm';
+    }
     return (
     <div className="card">
         <div className="card-top card-top-detail">
@@ -16,30 +45,30 @@ function DetailCard() {
         <div className="detail-card-middle">
             <div className="cm-left cml-left">
                 <div className="cml-title cmld-title">
-                    Daily Cryoto Learning Task
+                    {data.name}
                 </div>
                 <div className="cml-detail">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    {data.description}
                 </div>
                 <div className="cml-desc">
                     <div className="cmld-time">
                         <img className="cmldt-img" src="time.png" alt=""/>
                         <div className="cmldt-text cmldc-text">
-                            End in <span className="cmldt-time">5d:23h:29m</span>
+                            End in <span className="cmldt-time">{diffTime(data.endTime)}</span>
                         </div>
 
                     </div>
                     <div className="cmld-time cmld-people">
                         <img className="cmldt-img" src="people.png" alt=""/>
                         <div className="cmldt-text cmldc-text">
-                            1382
+                            {data.participants}
                         </div>
                     </div>
                 </div>
                 <div className="card-bottom">
                     <img className="cb-img cbd-img" src="t.png" alt=""/>
                     <div className="cb-text cbd-text">
-                        2.8
+                        {data.reward}
                         <span className="cb-text-right cbd-text-right">
                             USDT
                         </span>
