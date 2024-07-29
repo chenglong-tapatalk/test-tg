@@ -1,34 +1,8 @@
 import {useSelector} from "react-redux";
-import dayjs from "dayjs";
+import {diffTime} from "../helper/helper";
 
 function DetailCard() {
     const data = useSelector(store => store.questDetail);
-    const diffTime = (time: Date | string) => {
-        console.log(dayjs(time).diff(dayjs(),'second'));
-        const times = dayjs(time).diff(dayjs(),'second');
-        let d = '0';
-        let i = '00';
-        let s = '00';
-        if (times > 86400) {
-            d = Math.floor(times / 86400) + '';
-        }
-        const hour = times % 86400;
-        if (hour > 3600) {
-            i = Math.floor(hour / 3600) + '';
-            if (parseInt(i) < 10) {
-                i = '0' + i;
-            }
-        }
-        const minute = hour % 3600;
-        if (minute > 0) {
-            s = Math.floor(minute / 60) + '';
-            if (parseInt(s) < 10) {
-                s = '0' + s;
-            }
-        }
-
-        return d + 'd:' + i + 'h:' + s + 'm';
-    }
     return (
     <div className="card">
         <div className="card-top card-top-detail">
