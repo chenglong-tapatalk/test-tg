@@ -32,7 +32,7 @@ function Home() {
 
         {/*</div>*/}
         <div className="card-main">
-            {quest.map((c:any,i:any) =>
+            {quest && quest.map((c:any,i:any) =>
                 <Card data={c} index={i} />
             )}
         </div>
