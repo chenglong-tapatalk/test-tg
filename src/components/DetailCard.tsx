@@ -1,14 +1,19 @@
 import {useSelector} from "react-redux";
 import {diffTime} from "../helper/helper";
+import { TGClient } from '../service/telegram'
 
 function DetailCard() {
     const data = useSelector((store:any) => store.questDetail);
+
     return (
     <div className="card">
         <div className="card-top card-top-detail">
             <div className="ct-left ctd-left">
                 <img className="ct-right-img ctd-right-img" src="card.png" alt=""/>
-                <div className="ct-left-text ctd-left-text">
+                <div className="ct-left-text ctd-left-text" onClick={()=>{
+
+                    TGClient.shareOuterLink('https://t.me/theYescoin');
+                }}>
                     YesBloom
                 </div>
             </div>

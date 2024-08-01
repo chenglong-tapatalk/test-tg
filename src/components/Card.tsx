@@ -1,8 +1,11 @@
 import {diffTime} from "../helper/helper";
+import { useNavigate } from 'react-router-dom';
+
 function Card(props:any) {
     const {data} = props;
+    const navigate = useNavigate();
     return (
-    <div className="card" onClick={()=>{window.location.href='/?tab=detail&id='+data.id}}>
+    <div className="card" onClick={()=>{navigate('/detail/'+data.id)}}>
         <div className="card-top">
             <div className="ct-left">
                 <img className="ct-right-img" src={data.advertiserVo.logoUrl} alt=""/>

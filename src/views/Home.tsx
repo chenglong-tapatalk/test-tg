@@ -1,6 +1,6 @@
-import Card from "./Card";
+import Card from "../components/Card";
 // import WebApp from '@twa-dev/sdk';
-import store from "../store";
+import store from "../store/index";
 import { getQuestList } from "../store/reducer";
 import { useSelector } from "react-redux";
 import {useEffect} from "react";
@@ -33,7 +33,7 @@ function Home() {
         {/*</div>*/}
         <div className="card-main">
             {quest && quest.map((c:any,i:any) =>
-                <Card data={c} index={i} />
+                <Card data={c} key={i} index={i} />
             )}
         </div>
     </div>

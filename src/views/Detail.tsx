@@ -1,19 +1,22 @@
-import DetailCard from "./DetailCard.tsx"
+import DetailCard from "../components/DetailCard.tsx"
 import {useEffect} from "react";
-import {getQuestDetail} from "../store/reducer";
-import store from "../store";
+import {getQuestDetail,getTaskByQuest} from "../store/reducer";
+import store from "../store/index";
 import {useSelector} from "react-redux";
 import {getQueryVariable} from "../helper/helper";
+import { useParams } from 'react-router';
 
 function Detail() {
 
-    const id = getQueryVariable('id');
+    const params = useParams();
+    const { id } = params;
     console.log(id);
     if (!id) {
         return false;
     }
     useEffect(() => {
         store.dispatch(getQuestDetail(id));
+        store.dispatch(getTaskByQuest(id));
     }, []);
     const data = useSelector((store:any) => store.questDetail);
     return (

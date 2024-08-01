@@ -1,7 +1,8 @@
 import './App.css'
-import Home from './components/Home.tsx';
-// import My from './components/My.tsx';
-import Detail from './components/Detail.tsx';
+import { Route, Routes } from 'react-router-dom';
+import Home from './views/Home.tsx';
+import My from './views/My.tsx';
+import Detail from './views/Detail.tsx';
 
 import { TonConnectUIProvider } from '@tonconnect/ui-react';
 import {PersistGate} from "redux-persist/integration/react";
@@ -21,9 +22,11 @@ function App() {
         <PersistGate loading={null} persistor={persistor} >
             <Provider store={store}>
                 <TonConnectUIProvider manifestUrl="https://test-long.metaforo.io/tonconnect-manifest.json">
-                    {getQueryVariable('tab') == false && <Home />}
-                    {getQueryVariable('tab') == 'detail' && <Detail />}
-                    {/*<My />*/}
+                    <Routes>
+                            <Route exact path="/" element={<Home />} />
+                            <Route path="/detail/:id" element={<Detail />} />
+                            <Route path="/my" element={<My />} />
+                    </Routes>
                 </TonConnectUIProvider>
             </Provider>
         </PersistGate>
