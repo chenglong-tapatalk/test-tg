@@ -3,7 +3,6 @@ import {useEffect} from "react";
 import {getQuestDetail,getTaskByQuest} from "../store/reducer";
 import store from "../store/index";
 import {useSelector} from "react-redux";
-import {getQueryVariable} from "../helper/helper";
 import { useParams } from 'react-router';
 
 function Detail() {

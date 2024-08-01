@@ -25,14 +25,3 @@ export function diffTime(time: Date | string) {
 
     return d + 'd:' + i + 'h:' + s + 'm';
 }
-
-export function getQueryVariable(variable:string) {
-    const query = window.location.search.substring(1);
-    console.log(query);
-    const vars = query.split("&");
-    for (let i=0;i<vars.length;i++) {
-        let pair = vars[i].split("=");
-        if(pair[0] == variable){return pair[1];}
-    }
-    return false;
-}

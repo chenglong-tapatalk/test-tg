@@ -12,7 +12,6 @@ import {
     QueryClientProvider,
     QueryClient,
 } from "@tanstack/react-query";
-import {getQueryVariable} from "./helper/helper";
 
 const queryClient = new QueryClient();
 
@@ -23,7 +22,7 @@ function App() {
             <Provider store={store}>
                 <TonConnectUIProvider manifestUrl="https://test-long.metaforo.io/tonconnect-manifest.json">
                     <Routes>
-                            <Route exact path="/" element={<Home />} />
+                            <Route path="/" element={<Home />} />
                             <Route path="/detail/:id" element={<Detail />} />
                             <Route path="/my" element={<My />} />
                     </Routes>

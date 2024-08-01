@@ -5,7 +5,7 @@ export function post(url: string, data: any, config?: any) {
     myHeaders.append("Content-Type", typeof data == 'object' ? "application/json" : 'application/x-www-form-urlencoded');
     myHeaders.append("Authorization", token);
     if (config) {
-        config.map((conf)=>{
+        config.map((conf:any)=>{
             myHeaders.append(conf.name,conf.value);
         })
     }

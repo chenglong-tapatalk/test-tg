@@ -17,7 +17,6 @@ import {
     postEvent,
     request,
     retrieveLaunchParams,
-    setDebug,
 } from '@tma.js/sdk'
 
 import { importScript } from '../helper/cdn'

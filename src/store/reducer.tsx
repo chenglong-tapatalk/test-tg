@@ -32,7 +32,7 @@ const mainSlice = createSlice({
                 });
         },
         getQuestDetail(state,action) {
-            state.questDetail = [];
+            state.questDetail = null;
             post("/api/app/quest/getAppQuest/"+action.payload,{}).then((res:any)=>{
                 console.log(123,res);
                 if (res) {
@@ -43,8 +43,8 @@ const mainSlice = createSlice({
             });
         },
         getTaskByQuest(state,action) {
-            state.questDetail = [];
-            const result = post("/api/app/task/getAppTasks",'questId='+action.payload).then((res)=>{
+            state.questTasks = null;
+            post("/api/app/task/getAppTasks",'questId='+action.payload).then((res)=>{
                 console.log(123,res);
             });
         }
